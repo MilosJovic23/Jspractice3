@@ -1,12 +1,14 @@
+
 //
 
-
-var cenaProizvoda = Number(
+let productPrice = Number(
 	document.getElementById("cena").getAttribute("data-cena")
 );
-var porez = cenaProizvoda * 0.2;
+let tax = productPrice * 0.2;
 
-function cenaSaPdvom() {
-	alert("cena proizvoda sa porezom je " + (cenaProizvoda + porez));
+function priceWithTax() {
+	alert("price of product is " + (productPrice + tax));
 }
-document.getElementById("buyButton").addEventListener("click", cenaSaPdvom);
+
+document.getElementById("buyButton").addEventListener("click", priceWithTax);
+
